@@ -26,8 +26,8 @@ autocmd FileType r inoremap <tab> <C-x><C-o>
 autocmd FileType r inoremap <expr> j pumvisible() ? "\<C-N>" : "j"
 autocmd FileType r inoremap <expr> k pumvisible() ? "\<C-P>" : "k"
 
-"let R_term = "rxvt-hammett"
-"let R_start_libs = "base,stats,graphics,grDevices,utils,methods,ggplot2,dplyr,reshape2,tidyr"
+let R_term = "rxvt-hammett"
+let R_start_libs = "base,stats,graphics,grDevices,utils,methods,ggplot2,dplyr,reshape2,tidyr"
 
 " R TMUX
 let R_in_buffer = 0
