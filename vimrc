@@ -42,3 +42,12 @@ nmap <Space> <Plug>RDSendLine
 
 "Latex
 let g:LatexBox_viewer = "zathura --fork"
+autocmd FileType tex inoremap <Tab><Tab> <Esc>/<++><Enter>"_c4l
+autocmd FileType tex inoremap :itm \begin{itemize}<Enter><Enter>\end{itemize}<Enter><Enter><++><Esc>3kA\item<Space>
+autocmd FileType tex inoremap :item \item 
+autocmd FileType tex inoremap :bf \textbf{}<++><Esc>T{i
+autocmd FileType tex inoremap :emph \emph{}<++><Esc>T{i
+autocmd FileType tex inoremap :ra {\rightarrow}
+autocmd FileType tex inoremap :la {\leftarrow}
+autocmd FileType tex inoremap :tab \begin{tabular}<Enter><++><Enter>\end{tabular}<Enter><Enter><++><Esc>4kA{}<Esc>i
+autocmd FileType tex inoremap :beg \begin{DELRN}<Enter><++><Enter>\end{DELRN}<Enter><Enter><++><Esc>4k0fR:MultipleCursorsFind<Space>DELRN<Enter>c
