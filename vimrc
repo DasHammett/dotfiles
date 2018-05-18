@@ -1,7 +1,7 @@
 execute pathogen#infect()
 set background=dark
-"colorscheme PaperColor
-colorscheme gruvbox
+colorscheme PaperColor
+"colorscheme gruvbox
 syntax on
 filetype plugin indent on
 set number
@@ -13,8 +13,8 @@ set noexpandtab
 set autoindent
 set relativenumber
 set laststatus=2
-"let g:airline_theme="papercolor"
-let g:airline_theme="gruvbox"
+let g:airline_theme="papercolor"
+"let g:airline_theme="gruvbox"
 let g:airline#extensions#tabline#enabled = 1
 nnoremap <F4> :buffers<CR>:buffer!<Space>
 
@@ -47,7 +47,7 @@ autocmd FileType tex inoremap :itm \begin{itemize}<Enter><Enter>\end{itemize}<En
 autocmd FileType tex inoremap :item \item 
 autocmd FileType tex inoremap :bf \textbf{}<++><Esc>T{i
 autocmd FileType tex inoremap :emph \emph{}<++><Esc>T{i
-autocmd FileType tex inoremap :ra {\rightarrow}
-autocmd FileType tex inoremap :la {\leftarrow}
+autocmd FileType tex inoremap :ra $\rightarrow$
+autocmd FileType tex inoremap :la $\leftarrow$
 autocmd FileType tex inoremap :tab \begin{tabular}<Enter><++><Enter>\end{tabular}<Enter><Enter><++><Esc>4kA{}<Esc>i
 autocmd FileType tex inoremap :beg \begin{DELRN}<Enter><++><Enter>\end{DELRN}<Enter><Enter><++><Esc>4k0fR:MultipleCursorsFind<Space>DELRN<Enter>c
