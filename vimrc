@@ -13,7 +13,7 @@ set noexpandtab
 set autoindent
 set relativenumber
 set laststatus=2
-let g:airline_theme="papercolor"
+let g:airline_theme="distinguished"
 "let g:airline_theme="gruvbox"
 let g:airline#extensions#tabline#enabled = 1
 nnoremap <F4> :buffers<CR>:buffer!<Space>
@@ -41,7 +41,11 @@ vmap <Space> <Plug>RDSendSelection
 nmap <Space> <Plug>RDSendLine
 
 "Latex
-let g:LatexBox_viewer = "zathura --fork"
+"let g:LatexBox_viewer = "zathura --fork"
+let g:vimtex_view_method = "zathura"
+"let g:tex_fast = ""
+nmap ga <Plug>(EasyAlign)
+xmap ga <Plug>(EasyAlign)
 autocmd FileType tex inoremap <Tab><Tab> <Esc>/<++><Enter>"_c4l
 autocmd FileType tex inoremap :itm \begin{itemize}<Enter><Enter>\end{itemize}<Enter><Enter><++><Esc>3kA\item<Space>
 autocmd FileType tex inoremap :item \item 
@@ -51,3 +55,6 @@ autocmd FileType tex inoremap :ra $\rightarrow$
 autocmd FileType tex inoremap :la $\leftarrow$
 autocmd FileType tex inoremap :tab \begin{tabular}<Enter><++><Enter>\end{tabular}<Enter><Enter><++><Esc>4kA{}<Esc>i
 autocmd FileType tex inoremap :beg \begin{DELRN}<Enter><++><Enter>\end{DELRN}<Enter><Enter><++><Esc>4k0fR:MultipleCursorsFind<Space>DELRN<Enter>c
+autocmd FileType tex inoremap :sec \section{}<Enter><Enter><++><Esc>2kf}i
+autocmd FileType tex inoremap :ssec \subsection{}<Enter><Enter><++><Esc>2kf}i
+
