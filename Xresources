@@ -15,6 +15,7 @@ URxvt.perl-ext-common: default,matcher
 URxvt.url-launcher: /usr/bin/google-chrome-unstable
 URxvt.matcher.pattern.1: \bwww\.[\w-]\.[\w./?&@#-]*[\w/-]
 URxvt.matcher.button: 2
+URxvt.buffered: false
 XTerm*background:black
 
 URxvt.foreground:       #0c0c0c
