@@ -1,4 +1,6 @@
-execute pathogen#infect()
+filetype off
+call pathogen#infect()
+call pathogen#helptags()
 set background=dark
 colorscheme PaperColor
 "colorscheme gruvbox
@@ -21,10 +23,15 @@ nnoremap <F4> :buffers<CR>:buffer!<Space>
 "let vimrplugin_assign = 2
 " Tab completion
 autocmd FileType r inoremap <tab> <C-x><C-o>
+autocmd FileType python inoremap <tab> <C-x><C-o>
 
 " Makes navigation with Omni completion work with j and k
+autocmd FileType python inoremap <expr> j pumvisible() ? "\<C-N>" : "j"
+autocmd FileType python inoremap <expr> k pumvisible() ? "\<C-P>" : "k"
 autocmd FileType r inoremap <expr> j pumvisible() ? "\<C-N>" : "j"
 autocmd FileType r inoremap <expr> k pumvisible() ? "\<C-P>" : "k"
+
+tnoremap <C-n> <C-w>N
 
 let R_term = "rxvt-hammett"
 let R_start_libs = "base,stats,graphics,grDevices,utils,methods,ggplot2,dplyr,reshape2,tidyr"
@@ -58,3 +65,8 @@ autocmd FileType tex inoremap :beg \begin{DELRN}<Enter><++><Enter>\end{DELRN}<En
 autocmd FileType tex inoremap :sec \section{}<Enter><Enter><++><Esc>2kf}i
 autocmd FileType tex inoremap :ssec \subsection{}<Enter><Enter><++><Esc>2kf}i
 
+let g:pymode_python = 'python3'
+let g:pymode_rope = 1
+let g:pymode_rope_completion = 1
+let g:pymode_rope_complete_on_dot = 0
+let g:sendtorepl_invoke_key = "<Space>"

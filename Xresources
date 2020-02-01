@@ -1,18 +1,18 @@
 Xcursor.theme: Adwaita 
-!Xft.dpi: 120
+!!Xft.dpi: 120
 Xft.dpi: 96
-URxvt.geometry: 105x33 
-URxvt.font: xft:Monoid:style=Regular:pixelsize=12
+!URxvt.geometry: 105x33 
+URxvt.font: xft:Monoid:pixelsize=12
 URxvt.boldFont: xft:Monoid:style=Regular:pixelsize=12
 URxvt.italicFont: xft:Monoid:style=Italic:pixelsize=12
-URxvt*borderLess: true
+!URxvt*borderLess: true
 URxvt*shading: 40
 !URxvt.font: xft:Input:style=Regular:pixelsize=15
 !URxvt.boldFont: xft:Input:style=Regular:pixelsize=15
 !URxvt.italicFont: xft:Fantasque Sans Mono:style=Italic:pixelsize=16
-!URxvt*letterSpace: -1
+URxvt*letterSpace: -1
 URxvt.perl-ext-common: default,matcher
-URxvt.url-launcher: /usr/bin/google-chrome-unstable
+URxvt.url-launcher: /usr/bin/google-chrome-stable
 URxvt.matcher.pattern.1: \bwww\.[\w-]\.[\w./?&@#-]*[\w/-]
 URxvt.matcher.button: 2
 URxvt.buffered: false
