@@ -1,13 +1,14 @@
 Xcursor.theme: Volantes Light Cursors
-Xft.dpi: 118
-*font: Monoid:style=Regular:pixelsize=12:antialias=true:autohint=false
-*boldFont: Monoid:style=Bold:pixelsize=12:antialias=true:autohint=false
-*italicFont: Monoid:style=Italic:pixelsize=12:antialias=true:autohint=false
+Xft.dpi: 120
+!*font: iosevka hammett:size=9.5:antialias=true:autohint:true
+*font: Victor Mono:style=Medium:size=9:antialias=true:autohint:true
+rofi.font: Victor Mono 16
 *alpha: 0.4
-URxvt*shading: 40
-URxvt.font: xft:Monoid:style=Regular:pixelsize=12:antialias=true:autohint=false
-!URxvt.boldFont: xft:Input:style=Regular:pixelsize=15
-!URxvt.italicFont: xft:Fantasque Sans Mono:style=Italic:pixelsize=16
+URxvt.font: xft:Victor Mono:size=9:style=Meidum:antialias=true:autohing:true
+!URxvt*shading: 40
+!URxvt.font: xft:Iosevka Term:style=Regular:pixelsize=12:antialias=true:autohint=true
+!URxvt.boldFont: xft:Iosevka Term:style=Heavy:pixelsize=12:antialias=true:autohint=true
+!URxvt.italicFont: xft:Iosevka Term:style=Oblique:pixelsize=12:antialias=true:autohint=true
 URxvt*letterSpace: -1
 URxvt.url-launcher: /usr/bin/google-chrome-stable
 URxvt.matcher.pattern.1: \bwww\.[\w-]\.[\w./?&@#-]*[\w/-]

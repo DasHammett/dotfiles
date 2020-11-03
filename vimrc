@@ -25,8 +25,8 @@ nmap ga <Plug>(EasyAlign)
 xmap ga <Plug>(EasyAlign)
 
 "Tab cycle through buffers
-nnoremap <Tab> :bnext<CR>
-nnoremap <S-Tab> :bprevious<CR>
+nnoremap <Tab> :bnext!<CR>
+nnoremap <S-Tab> :bprevious!<CR>
 
 " Tab to indent in visualmode
 vnoremap <S-Tab> <gv
@@ -39,18 +39,16 @@ nnoremap <F4> :buffers<CR>:buffer!<Space>
 inoremap <expr> j pumvisible() ? "\<C-N>" : "j"
 inoremap <expr> k pumvisible() ? "\<C-P>" : "k"
 
-" Maes Tab and Enter complete omni
-inoremap <expr> <Tab> pumvisible() ? "\<C-y>" : "\<C-g>u\<Tab>"
+" Makes Tab and Enter complete omni
+inoremap <expr> <Tab> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " mappings for python
-autocmd FileType python inoremap <tab> <C-x><C-o>
 autocmd FileType python nmap <buffer> <Space> <leader>w
 autocmd FileType python vmap <buffer> <Space> <leader>w
 autocmd FileType python AnyFoldActivate
 
 " mappings for R
-autocmd FileType r inoremap <tab> <C-x><C-o>
 autocmd FileType r AnyFoldActivate
 vmap <Space> <Plug>RDSendSelection
 nmap <Space> <Plug>RDSendLine
@@ -99,3 +97,10 @@ let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
+let g:airline#extensions#tabline#left_sep = ''
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+
+
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+set termguicolors
