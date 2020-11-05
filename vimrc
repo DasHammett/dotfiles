@@ -3,12 +3,19 @@ let g:pathogen_disabled = []
 call pathogen#infect()
 call pathogen#helptags()
 set background=dark
-colorscheme PaperColor
 syntax on
 filetype plugin indent on
 set number
 set fileencoding=utf-8
-set t_Co=256
+  let g:PaperColor_Theme_Options = {
+    \   'theme': {
+    \     'default': {
+    \       'allow_italic': 1,
+    \       'allow_bold': 1
+    \     }
+    \   }
+    \ }
+set termguicolors
 set shiftwidth=3
 set tabstop=4 softtabstop=4
 set expandtab
@@ -18,6 +25,9 @@ set laststatus=2
 set clipboard=unnamedplus
 set incsearch
 set completeopt=longest,menuone
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+colorscheme PaperColor
 
 "key mappings
 nnoremap za zA
@@ -39,8 +49,8 @@ nnoremap <F4> :buffers<CR>:buffer!<Space>
 inoremap <expr> j pumvisible() ? "\<C-N>" : "j"
 inoremap <expr> k pumvisible() ? "\<C-P>" : "k"
 
-" Makes Tab and Enter complete omni
-inoremap <expr> <Tab> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" Makes Tab and Enter complete Omni
+inoremap <expr> <Tab> pumvisible() ? "\<C-y>" : "<c-x><c-o>"
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " mappings for python
@@ -49,9 +59,9 @@ autocmd FileType python vmap <buffer> <Space> <leader>w
 autocmd FileType python AnyFoldActivate
 
 " mappings for R
-autocmd FileType r AnyFoldActivate
 vmap <Space> <Plug>RDSendSelection
 nmap <Space> <Plug>RDSendLine
+autocmd FileType r AnyFoldActivate
 
 " mappings for Latex
 autocmd FileType tex inoremap <Tab><Tab> <Esc>/<++><Enter>"_c4l
@@ -89,7 +99,7 @@ let g:pymode_doc_bind = 'K'
 let g:NERDTreeWinPos = "left"
 
 " vim-airline setup
-let g:airline_theme="papercolor"
+let g:airline_theme="bubblegum"
 let g:airline#extensions#tabline#enabled = 0
 let g:airline_left_sep='>'
 let g:airline_right_sep='<'
@@ -99,8 +109,6 @@ let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
 let g:airline#extensions#tabline#left_sep = ''
 let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline#extensions#hunks#enabled=1
 
 
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-set termguicolors
