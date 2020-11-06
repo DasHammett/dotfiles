@@ -1,7 +1,8 @@
 Xcursor.theme: Volantes Light Cursors
 Xft.dpi: 118
 !*font: iosevka hammett:size=9.5:antialias=true:autohint:true
-*font: Victor Mono:weight=Medium:pixelsize=13:antialias=true:autohint:true
+!*font: Victor Mono:weight=Medium:pixelsize=13:antialias=true:autohint:true
+*font:  VictorMono Nerd Font Mono:weight=Medium:pixelsize=13:antialias=true:autohint:true
 rofi.font: Victor Mono 16
 *alpha: 0.4
 URxvt.font: xft:Victor Mono:size=9:style=Meidum:antialias=true:autohing:true
