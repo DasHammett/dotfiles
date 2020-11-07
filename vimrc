@@ -63,7 +63,7 @@ vmap <Space> <Plug>RDSendSelection
 nmap <Space> <Plug>RDSendLine
 autocmd FileType r AnyFoldActivate
 
-" mappings for Latex
+" mappings for LaTeX
 autocmd FileType tex inoremap <Tab><Tab> <Esc>/<++><Enter>"_c4l
 autocmd FileType tex inoremap :itm \begin{itemize}<Enter><Enter>\end{itemize}<Enter><Enter><++><Esc>3kA\item<Space>
 autocmd FileType tex inoremap :item \item 
