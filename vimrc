@@ -33,6 +33,11 @@ colorscheme PaperColor
 nnoremap za zA
 nmap ga <Plug>(EasyAlign)
 xmap ga <Plug>(EasyAlign)
+nnoremap <c-h> <c-w>h
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
+nnoremap <c-j> <c-w>j
+
 
 "Tab cycle through buffers
 nnoremap <Tab> :bnext!<CR>
