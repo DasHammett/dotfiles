@@ -121,5 +121,3 @@ let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.dirty='⚡'
 let g:airline#extensions#branch#enabled = 1
-
-
