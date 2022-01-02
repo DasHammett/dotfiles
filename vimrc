@@ -3,7 +3,7 @@ let g:pathogen_disabled = []
 call pathogen#infect()
 call pathogen#helptags()
 set background=dark
-syntax on
+"syntax on
 filetype plugin indent on
 set number
 set fileencoding=utf-8
@@ -28,7 +28,8 @@ set completeopt=longest,menuone
 set hidden
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-colorscheme PaperColor
+colorscheme PaperColor 
+syntax on
 
 "key mappings
 nnoremap za zA
@@ -85,8 +86,11 @@ autocmd FileType tex inoremap :ssec \subsection{}<Enter><Enter><++><Esc>2kf}i
 "Settings for plugins 
 " Nvim-R
 let R_external_term = "st -e"
+"let R_rconsole_width = winwidth(0)/2
 let R_start_libs = "base,stats,graphics,grDevices,utils,methods,ggplot2,dplyr,reshape2,tidyr"
 let R_assign = 3
+let Rout_more_colors = 1
+let R_notmuxconf = 1
 
 "vim-tex
 let g:vimtex_view_method = "zathura"
