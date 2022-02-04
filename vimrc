@@ -57,7 +57,7 @@ inoremap <expr> j pumvisible() ? "\<C-N>" : "j"
 inoremap <expr> k pumvisible() ? "\<C-P>" : "k"
 
 " Makes Tab and Enter complete Omni
-inoremap <expr> <Tab> pumvisible() ? "\<C-y>" : "<c-x><c-o>"
+" inoremap <expr> <Tab> pumvisible() ? "\<C-y>" : "<c-x><c-o>"
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " mappings for python
