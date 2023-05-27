@@ -1,9 +1,8 @@
 filetype off
 let g:pathogen_disabled = []
 call pathogen#infect()
-call pathogen#helptags()
+"call pathogen#helptags()
 set background=dark
-"syntax on
 filetype plugin indent on
 set number
 set fileencoding=utf-8
@@ -30,6 +29,7 @@ let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 colorscheme PaperColor 
 syntax on
+let g:airline#extensions#searchcount#enabled = 0
 
 "key mappings
 nnoremap za zA
@@ -39,6 +39,8 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
 nnoremap <c-j> <c-w>j
+nnoremap n nzz
+nnoremap N Nzz
 
 
 "Tab cycle through buffers
@@ -53,11 +55,11 @@ vnoremap <Tab> >gv
 nnoremap <F4> :buffers<CR>:buffer!<Space>
 
 " Makes navigation with Omni completion work with j and k
-inoremap <expr> j pumvisible() ? "\<C-N>" : "j"
-inoremap <expr> k pumvisible() ? "\<C-P>" : "k"
+" inoremap <expr> j pumvisible() ? "\<C-N>" : "j"
+" inoremap <expr> k pumvisible() ? "\<C-P>" : "k"
 
 " Makes Tab and Enter complete Omni
-" inoremap <expr> <Tab> pumvisible() ? "\<C-y>" : "<c-x><c-o>"
+inoremap <expr> <Tab> pumvisible() ? "\<C-y>" : "<c-x><c-o>"
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " mappings for python
@@ -91,6 +93,7 @@ let R_start_libs = "base,stats,graphics,grDevices,utils,methods,ggplot2,dplyr,re
 let R_assign = 3
 let Rout_more_colors = 1
 let R_notmuxconf = 1
+let R_set_omnifunc = ["r","R"]
 
 "vim-tex
 let g:vimtex_view_method = "zathura"
@@ -104,6 +107,7 @@ let g:pymode_rope_autoimport = 0
 let g:pymode_options_colorcolumn = 0
 let g:pymode_doc = 1
 let g:pymode_doc_bind = 'K'
+let g:repl_position = 3
 
 " NerdTree
 let g:NERDTreeWinPos = "left"

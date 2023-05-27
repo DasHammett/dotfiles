@@ -3,7 +3,7 @@ Xft.dpi: 118
 !*font: iosevka hammett:size=9.5:antialias=true:autohint:true
 *font: Victor Mono:weight=Medium:pixelsize=13:antialias=true:autohint:true
 rofi.font: Victor Mono 16
-*alpha: 0.4
+*alpha: 0.3
 
 !*foreground:       #0c0c0c
 *color0:           #3f3f3f
